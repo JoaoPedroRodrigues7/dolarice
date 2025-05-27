@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Doutor & Onça</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom, rgba(208, 231, 255, 0), rgba(255, 255, 255, 0)), 
+                  url('ft\ e\ vidios/00008.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #002244;
+      min-height: 100vh;
+    }
+    header {
+      background-color: rgba(0, 119, 204, 0.9);
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+      backdrop-filter: blur(5px);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+    .musica-topo {
+      background-color: rgba(240, 248, 255, 0.9);
+      border-radius: 15px;
+      max-width: 500px;
+      margin: 30px auto;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+      backdrop-filter: blur(3px);
+    }
+    .musica-topo h2 {
+      color: #0077cc;
+      font-size: 1.5em;
+      margin-bottom: 10px;
+    }
+    .musica-topo audio {
+      width: 100%;
+      outline: none;
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 800px;
+      margin: auto;
+      background-color: rgba(255, 255, 255, 0.85);
+      border-radius: 15px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+      margin-bottom: 30px;
+      backdrop-filter: blur(3px);
+    }
+    section h2 {
+      text-align: center;
+      color: #005999;
+      margin-bottom: 10px;
+    }
+    section p {
+      font-size: 1.2em;
+      line-height: 1.6em;
+    }
+    footer {
+      background-color: rgba(0, 119, 204, 0.9);
+      text-align: center;
+      padding: 30px 20px;
+      margin-top: 40px;
+      backdrop-filter: blur(5px);
+    }
+    .botao-footer {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 24px;
+      background-color: white;
+      color: #0077cc;
+      text-decoration: none;
+      border-radius: 10px;
+      font-weight: bold;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    .botao-footer:hover {
+      background-color: #005fa3;
+      color: white;
+    }
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      margin: 20px auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .galeria {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .galeria img {
+      width: 30%;
+      max-width: 200px;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .contador {
+      text-align: center;
+      font-size: 1.8em;
+      margin-top: 40px;
+      color: #004080;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Doutor & Onça</h1>
+    <p>Eu te amo minha onça 💖</p>
+  </header>
+
+  <div class="musica-topo">
+    <h2>🎵 Quando escuto lembro de você</h2>
+    <audio controls autoplay loop>
+      <source src="ft e vidios/Áudio.unknown" type="audio/mpeg">
+    </audio>
+  </div>
+
+  <section>
+    <h2>Como tudo começou</h2>
+    <img src="ft e vidios/01.jpg" alt="Imagem parte 01">
+    <p>Tudo isso começou no alto do pipoco, como você dizia, quando sofri um acidente que mudou minha vida. Eu bati meus olhos em você. Desse dia em diante, descobri que entre nós não existe 'entre' e que, quando você me encara, eu fico igual ao seu guarda-roupas: uma bagunça só.</p>
+  </section>
+
+  <section>
+    <h2>Galeria de Momentos</h2>
+    <div class="galeria">
+      <img src="ft e vidios/IMG_20240720_105450.jpg" alt="Foto 1">
+      <img src="ft e vidios/IMG_20240801_154956_874.jpg" alt="Foto 2">
+      <img src="ft e vidios/IMG_20240831_202424_228.jpg" alt="Foto 3">
+    </div>
+  </section>
+
+  <section>
+    <h2>Estamos juntos há...</h2>
+    <div class="contador" id="contador"></div>
+  </section>
+
+  <footer>
+    <a href="parte02.html" class="botao-footer" target="_blank">💌 Clique aqui onça</a>
+  </footer>
+
+  <script>
+    function atualizarContador() {
+      const dataInicio = new Date('2023-11-22T00:00:00');
+      const agora = new Date();
+      const diff = agora - dataInicio;
+
+      const dias = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const horas = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const minutos = Math.floor((diff / (1000 * 60)) % 60);
+      const segundos = Math.floor((diff / 1000) % 60);
+
+      document.getElementById('contador').innerText =
+        `${dias} dias, ${horas} horas, ${minutos} minutos e ${segundos} segundos 💙`;
+    }
+
+    setInterval(atualizarContador, 1000);
+    atualizarContador();
+  </script>
+</body>
+</html>
