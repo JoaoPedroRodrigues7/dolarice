@@ -10,7 +10,7 @@
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
       background: linear-gradient(to bottom, rgba(208, 231, 255, 0), rgba(255, 255, 255, 0)), 
-                  url('ft\ e\ vidios/00008.jpg') no-repeat center center fixed;
+                  url('ft e vidios/00008.jpg') no-repeat center center fixed;
       background-size: cover;
       color: #002244;
       min-height: 100vh;
@@ -95,19 +95,30 @@
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
-    .galeria {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 20px;
-      padding: 40px 20px;
-      max-width: 1000px;
-      margin: auto;
+    .galeria-video {
+      text-align: center;
     }
-    .galeria video {
+    .galeria-video video {
       max-width: 100%;
       border-radius: 15px;
       box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    }
+    .galeria-fotos {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 20px;
+    }
+    .galeria-fotos img {
+      width: 150px;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .galeria-fotos img:hover {
+      transform: scale(1.05);
     }
     .contador {
       text-align: center;
@@ -137,13 +148,27 @@
     <p>Tudo isso começou no alto do pipoco, como você dizia, quando sofri um acidente que mudou minha vida. Eu bati meus olhos em você. Desse dia em diante, descobri que entre nós não existe 'entre' e que, quando você me encara, eu fico igual ao seu guarda-roupas: uma bagunça só.</p>
   </section>
 
+  <!-- Quadro do Vídeo -->
   <section>
     <h2>Editado pelo o Clitin 🦜</h2>
-    <div class="galeria">
-      <video controls poster="ft e vidios/capa-do-video.jpg">
-        <source src="ft e vidios/video.mp4" type="video/mp4">
+    <div class="galeria-video">
+      <video controls poster="ft e vidios/4.jpg">
+        <source src="ft e vidios/000009.mp4" type="video/mp4">
         Seu navegador não suporta a reprodução de vídeos.
       </video>
+    </div>
+  </section>
+
+  <!-- Quadro da Galeria de Fotos -->
+  <section>
+    <h2>Alguns Momentos Nossos</h2>
+    <div class="galeria-fotos">
+      <img src="ft e vidios/3.jpg" alt="Foto 1">
+      <img src="ft e vidios/5.jpg" alt="Foto 2">
+      <img src="ft e vidios/IMG_20240831_202424_228.jpg" alt="Foto 3">
+      <img src="ft e vidios/6.jpg" alt="Foto 4">
+      <img src="ft e vidios/Imagem do WhatsApp de 2025-06-09 à(s) 15.04.30_bd894c23.jpg" alt="Foto 5">
+      <img src="ft e vidios/IMG_20240720_105450.jpg" alt="Foto 6">
     </div>
   </section>
 
