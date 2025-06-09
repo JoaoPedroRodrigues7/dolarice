@@ -97,19 +97,17 @@
     }
     .galeria {
       display: flex;
-      justify-content: space-around;
+      justify-content: center;
       flex-wrap: wrap;
       gap: 20px;
       padding: 40px 20px;
       max-width: 1000px;
       margin: auto;
     }
-    .galeria img {
-      width: 30%;
-      max-width: 200px;
-      height: auto;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    .galeria video {
+      max-width: 100%;
+      border-radius: 15px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
     }
     .contador {
       text-align: center;
@@ -140,11 +138,12 @@
   </section>
 
   <section>
-    <h2>Galeria de Momentos</h2>
+    <h2>Editado pelo o Clitin 🦜</h2>
     <div class="galeria">
-      <img src="ft e vidios/IMG_20240720_105450.jpg" alt="Foto 1">
-      <img src="ft e vidios/IMG_20240801_154956_874.jpg" alt="Foto 2">
-      <img src="ft e vidios/IMG_20240831_202424_228.jpg" alt="Foto 3">
+      <video controls poster="ft e vidios/capa-do-video.jpg">
+        <source src="ft e vidios/video.mp4" type="video/mp4">
+        Seu navegador não suporta a reprodução de vídeos.
+      </video>
     </div>
   </section>
 
